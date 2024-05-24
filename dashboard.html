@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Management System</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Unique styling for navbar */
+    .navbar {
+      background-color: #343a40; /* Dark color for navbar */
+      z-index: 1; /* Ensure navbar stays on top */
+    }
+
+    .navbar-toggler-icon {
+      background-color: #fff; /* White color for the toggler icon */
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff !important; /* White color for the links */
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #dfe6e9 !important; /* Lighter shade of white on hover */
+    }
+
+    /* Additional styling for offcanvas sidebar */
+    .sidebar {
+      position: fixed; /* Position sidebar fixed */
+      top: 55px; /* Align to the top, below the navbar */
+      left: 0; /* Align to the left */
+      height: calc(100% - 55px); /* Full height minus navbar height */
+      width: 200px; /* Fixed width */
+      background-color: #2ecc71; /* Green color for sidebar */
+      padding: 20px;
+      z-index: 0; /* Ensure sidebar stays below navbar */
+    }
+
+    .sidebar button {
+      margin-bottom: 10px; /* Add margin below buttons */
+    }
+
+    .content {
+      margin-left: 200px; /* Adjust margin to accommodate sidebar */
+      padding: 20px;
+    }
+
+    /* Custom styling for admin button */
+    .admin-btn {
+      background-color: #fff; /* White background */
+      color: #343a40; /* Dark color for text */
+      border: none; /* Remove border */
+      border-radius: 50%; /* Make button round */
+      width: 30px; /* Set width */
+      height: 30px; /* Set height */
+      padding: 0; /* Remove padding */
+    }
+
+    /* Custom styling for search form */
+    .search-form {
+      margin-right: 10px; /* Add margin to the right */
+    }
+
+    .search-input {
+      width: 100px; /* Set width */
+      height: auto; /* Set height */
+      padding: 6px 10px; /* Adjust padding */
+    }
+
+    .search-btn {
+      background-color: #007bff; /* Blue background */
+      color: #fff; /* White color for text */
+      border: none; /* Remove border */
+      border-radius: 5px; /* Rounded border */
+      padding: 6px 10px; /* Adjust padding */
+      cursor: pointer; /* Add pointer cursor */
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Training</a>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Employee</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Program</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Enroll</a>
+          </li>
+      </ul>
+      <!-- Move the form and the admin button to the right -->
+      <form class="form-inline my-2 my-lg-0 mr-2 search-form">
+        <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0 search-btn" type="submit">Search</button>
+      </form>
+      <button class="btn btn-outline-light my-2 my-sm-0 admin-btn" type="submit">
+        <a href="admin.html"><img src="admin_logo.png" alt="Admin" width="20" height="20"></a>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="sidebar">
+  <!-- Sidebar content -->
+  <button class="btn btn-primary mb-3">Button 1</button>
+  <button class="btn btn-primary mb-3">Button 2</button>
+  <button class="btn btn-primary">Button 3</button>
+</div>
+
+<div class="content">
+  <!-- Main content -->
+  <h1>Main Content Area</h1>
+  <p>This is where your main content goes.</p>
+</div>
+
+</body>
+</html>
